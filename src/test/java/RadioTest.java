@@ -3,6 +3,69 @@ import org.junit.jupiter.api.Test;
 
 public class RadioTest {
     @Test
+    public void stationNumder() {
+        Radio radio = new Radio(10);
+        radio.setCurrentStation(7);
+        int expected = 7;
+        int actual = radio.getCurrentStation();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void stationNumder1() {
+        Radio radio = new Radio(10);
+        radio.setCurrentStation(0);
+        int expected = 0;
+        int actual = radio.getCurrentStation();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void stationNumder2() {
+        Radio radio = new Radio(10);
+        radio.setCurrentStation(1);
+        int expected = 1;
+        int actual = radio.getCurrentStation();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void stationNumder3() {
+        Radio radio = new Radio(10);
+        radio.setCurrentStation(10);
+        int expected = 0;
+        int actual = radio.getCurrentStation();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void stationNumder4() {
+        Radio radio = new Radio(10);
+        radio.setCurrentStation(9);
+        int expected = 9;
+        int actual = radio.getCurrentStation();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void stationNumder5() {
+        Radio radio = new Radio(10);
+        radio.setCurrentStation(-1);
+        int expected = 0;
+        int actual = radio.getCurrentStation();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void stationNumder6() {
+        Radio radio = new Radio(10);
+        radio.setCurrentStation(11);
+        int expected = 0;
+        int actual = radio.getCurrentStation();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
     public void nextStation() {
         Radio radio = new Radio();
 
